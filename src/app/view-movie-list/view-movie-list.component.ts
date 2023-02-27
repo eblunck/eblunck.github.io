@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-movie-list.component.css']
 })
 export class ViewMovieListComponent {
+  onSubmit(): void {
+    console.log("hej");
+  }
 
 }
