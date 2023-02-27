@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-movie.component.css']
 })
 export class ViewMovieComponent {
-
+  name:string = "";
+  desc:string = "";
+  author:string = "";
+  id:string = "";
+  review:string = "";
 }
