@@ -25,7 +25,7 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: ViewMovieListComponent },
+      { path: 'ViewMovieList', component: ViewMovieListComponent },
       { path: 'ViewMovieComponent/:movieId', component: ViewMovieComponent },
       { path: 'ViewWatchedListComponent', component: ViewWatchedListComponent },
       { path: 'ViewWatchListComponent', component: ViewWatchListComponent },
