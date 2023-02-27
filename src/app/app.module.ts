@@ -8,7 +8,7 @@ import { ViewWatchListComponent } from './view-watch-list/view-watch-list.compon
 import { ViewWatchedListComponent } from './view-watched-list/view-watched-list.component';
 import { ViewMovieComponent } from './view-movie/view-movie.component';
 import { RouterModule } from '@angular/router';
-
+import { bootstrapApplication } from '@angular/platform-browser';
 //Elin was here
 // Maja test
 // Emilia test
