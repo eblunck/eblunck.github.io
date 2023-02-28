@@ -9,7 +9,6 @@ import { ViewMovieComponent as Movie } from '../view-movie/view-movie.component'
 })
 export class ViewMovieListComponent {
   constructor(public data: JenniferDataServiceService) {
-  this.data.setInitialList();
   }
   showMovies() : string {
     return JSON.stringify(this.data['moviesToWatch']['_value']);

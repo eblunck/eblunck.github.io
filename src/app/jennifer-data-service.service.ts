@@ -20,7 +20,7 @@ export class JenniferDataServiceService {
   setWatchList(movies: Movie[]) {
     this.moviesToWatch.next(movies);
   }
-  setInitialList() {
+  loadDb() {
     this.moviesToWatch.next(TEST_BOOKS);
   }
 }
