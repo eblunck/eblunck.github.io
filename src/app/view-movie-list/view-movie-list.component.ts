@@ -7,9 +7,11 @@ import { ViewMovieComponent as Movie } from '../view-movie/view-movie.component'
   templateUrl: './view-movie-list.component.html',
   styleUrls: ['./view-movie-list.component.css']
 })
+
 export class ViewMovieListComponent {
   constructor(public data: JenniferDataServiceService) {
   }
+
   showMovies() : string {
     return JSON.stringify(this.data['moviesToWatch']['_value']);
   }
@@ -20,4 +22,5 @@ export class ViewMovieListComponent {
     this.data.setWatchList(hej);
     console.log("hej");
   }
+ 
 }

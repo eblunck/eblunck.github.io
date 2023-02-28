@@ -37,6 +37,11 @@
     </div>
   </nav>
 
+  <div *ngFor="let item of list" style="display: inline-block">
+    <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt="">
+  </div>
+
+
   <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
   <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
   <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->

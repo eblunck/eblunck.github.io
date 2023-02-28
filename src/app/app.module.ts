@@ -9,6 +9,7 @@ import { ViewWatchedListComponent } from './view-watched-list/view-watched-list.
 import { ViewMovieComponent } from './view-movie/view-movie.component';
 import { RouterModule } from '@angular/router';
 import { bootstrapApplication } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 //Elin was here
 // Maja test
 // Emilia test
@@ -24,6 +25,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule ,
     RouterModule.forRoot([
       { path: 'ViewMovieList', component: ViewMovieListComponent },
       { path: 'ViewMovieComponent/:movieId', component: ViewMovieComponent },
