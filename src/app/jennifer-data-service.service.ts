@@ -1,11 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ViewMovieComponent as Movie } from './view-movie/view-movie.component';
 import { BehaviorSubject } from 'rxjs';
 
-export const TEST_BOOKS: Movie[] = [
-  { name: "A", desc: "A Book", author: "Alle", id: "0", review: "Bra" },
-  { name: "B", desc: "B Book", author: "Blle", id: "1", review: "Dålig" }
-];
 
 @Injectable({
   providedIn: 'root'
@@ -13,14 +8,15 @@ export const TEST_BOOKS: Movie[] = [
 
 export class JenniferDataServiceService {
 
-  private moviesToWatch = new BehaviorSubject<Movie[]>([]);
+  private moviesToWatch = new BehaviorSubject<Array<number>>(new Array());
 
   watchList$ = this.moviesToWatch.asObservable();
 
-  setWatchList(movies: Movie[]) {
-    this.moviesToWatch.next(movies);
+  addToDb(data: any) {
+    this.moviesToWatch.next(data);
+    console.log(data);
   }
   loadDb() {
-    this.moviesToWatch.next(TEST_BOOKS);
   }
+
 }

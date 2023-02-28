@@ -21,6 +21,17 @@ export class AppComponent {
     this.http.get(url).subscribe((data: any) => {
       console.log(data);
       this.list = data.results;
+      console.log(this.list);
+      this.data.addToDb(this.list);
     });
+
   }
 }
+
+/**
+ * 
+ * data.results.map((movie: any) => {
+        console.log(movie.id);
+        this.data.addMovie(movie.id);
+      });
+ */

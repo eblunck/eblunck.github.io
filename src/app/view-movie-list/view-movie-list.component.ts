@@ -19,7 +19,7 @@ export class ViewMovieListComponent {
   addMovie() {
     let hej: Movie[] = [this.data['moviesToWatch']['_value'],
       { name: "C", desc: "A Book", author: "Calle", id: "2", review: "Mjeh" }];
-    this.data.setWatchList(hej);
+    //this.data.setWatchList(hej);
     console.log("hej");
   }
  
