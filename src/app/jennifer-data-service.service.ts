@@ -8,14 +8,19 @@ import { BehaviorSubject } from 'rxjs';
 
 export class JenniferDataServiceService {
 
+  private allMovies = new BehaviorSubject<Array<number>>(new Array());
   private moviesToWatch = new BehaviorSubject<Array<number>>(new Array());
 
-  watchList$ = this.moviesToWatch.asObservable();
+  allMovies$ = this.allMovies.asObservable();
+  moviesToWatch$ = this.moviesToWatch.asObservable();
 
   addToDb(data: any) {
-    this.moviesToWatch.next(data);
+    this.allMovies.next(data);
   }
-  loadDb() {
+
+  addToWatchList(data: any) {
+    this.moviesToWatch.next([...this.moviesToWatch.getValue(), data]);
+    console.log(this.moviesToWatch['_value']);
   }
 
 }

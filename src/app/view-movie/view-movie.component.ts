@@ -19,13 +19,12 @@ export class ViewMovieComponent implements OnInit {
     });
   }
 
-  showMovie(): string {
-    let movieInfo = this.data['moviesToWatch']['_value'].filter((movie : any) => movie.id == this.id);
-    return JSON.stringify(movieInfo);
+  getInfo(info: string): string{
+    let movieInfo = this.data['allMovies']['_value'].filter((movie : any) => movie.id == this.id)[0][info];
+    return movieInfo;
   }
 
-  getInfo(info: string): string{
-    let movieInfo = this.data['moviesToWatch']['_value'].filter((movie : any) => movie.id == this.id)[0][info];
-    return movieInfo;
+  addToWatchList() {
+    this.data.addToWatchList(this.id);
   }
 }
