@@ -19,8 +19,15 @@ export class JenniferDataServiceService {
   }
 
   addToWatchList(data: any) {
+    let dataId =data[0]['id'];
+    for (let i = 0; i < this.moviesToWatch['_value'].length; i++) {
+      let currId =this.moviesToWatch['_value'][i][0]['id'];
+      if (currId === dataId) {
+        return;
+      }
+    }
     this.moviesToWatch.next([...this.moviesToWatch.getValue(), data]);
-    console.log(this.moviesToWatch['_value']);
+   
   }
 
 }

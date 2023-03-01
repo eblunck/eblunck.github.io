@@ -25,6 +25,6 @@ export class ViewMovieComponent implements OnInit {
   }
 
   addToWatchList() {
-    this.data.addToWatchList(this.id);
+    this.data.addToWatchList(this.data['allMovies']['_value'].filter((movie : any) => movie.id == this.id));
   }
 }

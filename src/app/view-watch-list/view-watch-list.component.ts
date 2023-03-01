@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {JenniferDataServiceService} from '../jennifer-data-service.service';
+
 
 @Component({
   selector: 'app-view-watch-list',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-watch-list.component.css']
 })
 export class ViewWatchListComponent {
+
+  constructor(public data: JenniferDataServiceService) {
+    console.log(this.data['moviesToWatch']['_value']);
+  }
 
 }
