@@ -13,7 +13,9 @@ export class ViewMovieListComponent {
   }
 
   showMovies() : string {
-    return JSON.stringify(this.data['moviesToWatch']['_value']);
+    let hej = this.data['moviesToWatch']['_value'].filter((movie : any) => movie.id == 50546);
+    //JSON.stringify(this.data['moviesToWatch']['_value']);
+    return JSON.stringify(hej);
   }
 
   addMovie() {
