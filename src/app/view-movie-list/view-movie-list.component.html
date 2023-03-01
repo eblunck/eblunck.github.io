@@ -1,6 +1,9 @@
 <div> </div>
 <p>view-movie-list works!</p>
 
-<b>{{showMovies()}}</b>
-<div></div>
-<button (click)="addMovie()">add movie C !</button>
+<div *ngFor="let item of this.data['moviesToWatch']['_value']" style="display: inline-block">
+    <a class="nav-link" routerLinkActive="active" routerLink="/ViewMovie:{{item.id}}">
+      <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt=""></a>
+    <div></div>
+    <a class="nav-link" routerLinkActive="active" routerLink="/AppViewMovieComponent">{{item.title}}</a>
+  </div>
