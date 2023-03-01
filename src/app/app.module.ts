@@ -28,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule ,
     RouterModule.forRoot([
       { path: 'ViewMovieList', component: ViewMovieListComponent },
-      { path: 'ViewMovieComponent/:movieId', component: ViewMovieComponent },
+      { path: 'ViewMovie/:id', component: ViewMovieComponent },
       { path: 'ViewWatchedListComponent', component: ViewWatchedListComponent },
       { path: 'ViewWatchListComponent', component: ViewWatchListComponent },
     ])
