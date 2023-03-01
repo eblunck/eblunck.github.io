@@ -10,7 +10,6 @@ import {JenniferDataServiceService} from '../jennifer-data-service.service';
 export class ViewWatchListComponent {
 
   constructor(public data: JenniferDataServiceService) {
-    console.log(this.data['moviesToWatch']['_value']);
   }
 
 }
