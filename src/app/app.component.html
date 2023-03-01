@@ -38,7 +38,10 @@
   </nav>
 
   <div *ngFor="let item of list" style="display: inline-block">
-    <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt="">
+    <a class="nav-link" routerLinkActive="active" routerLink="/ViewMovie:{{item.id}}">
+      <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt=""></a>
+    <div></div>
+    <a class="nav-link" routerLinkActive="active" routerLink="/ViewMovie:{{item.id}}">{{item.title}}</a>
   </div>
 
 
