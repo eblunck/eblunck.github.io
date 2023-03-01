@@ -14,7 +14,6 @@ export class JenniferDataServiceService {
 
   addToDb(data: any) {
     this.moviesToWatch.next(data);
-    console.log(data);
   }
   loadDb() {
   }

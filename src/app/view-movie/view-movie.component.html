@@ -1,3 +1,5 @@
-<p>view-movie works!</p>
-<p>{{id}}</p>
-<p>{{showMovie()}}</p>
+<h1>{{getInfo('title')}}</h1>
+<h3>{{getInfo('release_date')}}</h3>
+<h3>Rating: {{getInfo('vote_average')}}</h3>
+<p>{{getInfo('overview')}}</p>
+<img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{getInfo('poster_path')}}" alt="">
