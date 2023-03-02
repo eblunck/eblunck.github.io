@@ -7,7 +7,9 @@
 <div></div>
 <br>
 <h2>Betygsätt filmen:</h2>
-<form [formGroup]="ratingForm" (ngSubmit)="onSubmit()" class="form-control">
+
+
+<form appearance="fill" class="full-width" [formGroup]="ratingForm" (ngSubmit)="onSubmit()" class="form-control" >
     <select formControlName="rating">
         <option value="0">0</option>
         <option value="1">1</option>
@@ -20,12 +22,12 @@
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
-    </select>
-    <button class="button" type="submit">Confirm rating</button>
+    </select >
+
+    <button mat-raised-button color="one" class="button" type="submit">Confirm rating</button>
 </form>
 <br><br>
-<button class="nav-link" routerLinkActive="active" routerLink="/ViewWatchListComponent" (click)="addToWatchList()">add
-    to watch-list</button>
-<button class="nav-link" routerLinkActive="active" routerLink="/ViewWatchedListComponent"
-    (click)="addToWatchedList()">add to have-watched-list</button>
+<button mat-raised-button color="one" class="nav-link" routerLinkActive="active" routerLink="/ViewWatchListComponent" (click)="addToWatchList()"> Lägg till i "filmer du vill se"</button>
+<button mat-raised-button color="one" class="nav-link" routerLinkActive="active" routerLink="/ViewWatchedListComponent"
+    (click)="addToWatchedList()">Lägg till i "filmer du sett"</button>
 <br>
