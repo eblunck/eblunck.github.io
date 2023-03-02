@@ -15,13 +15,10 @@ export class AppComponent {
   list: any;
 
   constructor(public data: JenniferDataServiceService, private http: HttpClient) {
-    //this.data.loadDb();
   }
   ngOnInit() {
     this.http.get(url).subscribe((data: any) => {
-      console.log(data);
       this.list = data.results;
-      console.log(this.list);
       this.data.addToDb(this.list);
     });
 

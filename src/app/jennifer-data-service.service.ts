@@ -18,9 +18,15 @@ export class JenniferDataServiceService {
   moviesToWatch$ = this.moviesToWatch.asObservable();
   watchedList$ = this.watchedList.asObservable();
 
+
   addToDb(data: any) {
-    this.allMovies.next([...data]);
-    this.unwatchedMovies.next([...data]);
+    let newJson = new Array();
+    data.forEach((item : any) => {
+      let newItem = {...item, ...{my_rating: "betygsätt filmen längre ner"}};
+      newJson.push(newItem);
+    });
+    this.allMovies.next([...newJson]);
+    this.unwatchedMovies.next([...newJson]);
   }
 
   addToWatchList(data: any) {
@@ -33,6 +39,16 @@ export class JenniferDataServiceService {
     }
     this.deleteFromUnwatched(data[0]);
     this.moviesToWatch.next([...this.moviesToWatch.getValue(), data]);
+  }
+  
+  rateMovie(data: any, rating: any) {
+    let dataId = data[0]['id'];
+    this.allMovies['_value'].forEach((item : any) => {
+      if (item['id'] === dataId) {
+        item['my_rating'] = rating;
+        return;
+      } 
+    });
   }
 
   addToWatchedList(data: any) {
@@ -67,5 +83,3 @@ export class JenniferDataServiceService {
     }
   }
 }
-
-
