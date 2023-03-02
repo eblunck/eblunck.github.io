@@ -1,33 +1,39 @@
-<h1>{{getInfo('title')}}</h1>
-<h3>{{getInfo('release_date')}}</h3>
-<h3>Rating: {{getInfo('vote_average')}}</h3>
-<h4>My rating: {{getInfo('my_rating')}}</h4>
-<p>{{getInfo('overview')}}</p>
-<img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{getInfo('poster_path')}}" alt="">
-<div></div>
-<br>
-<h2>Betygsätt filmen:</h2>
+<mat-card style="background-color: white;">
+    <mat-card-content>
+        <h1>{{getInfo('title')}}</h1>
+        <h3>{{getInfo('release_date')}}</h3>
+        <h3>Rating: {{getInfo('vote_average')}}</h3>
+        <h4>My rating: {{getInfo('my_rating')}}</h4>
+        <p>{{getInfo('overview')}}</p>
+        <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{getInfo('poster_path')}}" alt="">
+        <div></div>
+        <br>
+        <h2>Betygsätt filmen:</h2>
 
 
-<form appearance="fill" class="full-width" [formGroup]="ratingForm" (ngSubmit)="onSubmit()" class="form-control" >
-    <select formControlName="rating">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-    </select >
+        <form appearance="fill" class="full-width" [formGroup]="ratingForm" (ngSubmit)="onSubmit()"
+            class="form-control">
+            <select formControlName="rating" style="padding: 10px;">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
 
-    <button mat-raised-button color="one" class="button" type="submit">Confirm rating</button>
-</form>
-<br><br>
-<button mat-raised-button color="one" class="nav-link" routerLinkActive="active" routerLink="/ViewWatchListComponent" (click)="addToWatchList()"> Lägg till i "filmer du vill se"</button>
-<button mat-raised-button color="one" class="nav-link" routerLinkActive="active" routerLink="/ViewWatchedListComponent"
-    (click)="addToWatchedList()">Lägg till i "filmer du sett"</button>
-<br>
+            <button mat-raised-button color="one" class="button" type="submit">Confirm rating</button>
+        </form>
+        <br><br>
+        <button mat-raised-button color="one" class="nav-link" routerLinkActive="active"
+            routerLink="/ViewWatchListComponent" (click)="addToWatchList()"> Lägg till i "filmer du vill se"</button>
+        <button mat-raised-button color="one" class="nav-link" routerLinkActive="active"
+            routerLink="/ViewWatchedListComponent" (click)="addToWatchedList()">Lägg till i "filmer du sett"</button>
+        <br>
+    </mat-card-content>
+</mat-card>
