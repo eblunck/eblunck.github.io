@@ -8,32 +8,34 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- Toolbar -->
 
-  <!-- Background image -->
-  <div class="p-5 text-center bg-image" style="
+<!-- Background image -->
+<div class="p-5 text-center bg-image" style="
       background-image: url('https://www.linkpicture.com/q/jenn.png');
       height: 500px;
       background-position: 50% 50%;
       background-repeat: no-repeat;
     ">
-  </div>
-  <!-- Background image -->
+</div>
+<!-- Background image -->
 
-<div>
-  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-    <div style="padding-top: 10px;" class="container">
-      <button mat-raised-button color="allMovies" class="nav-link" type="button" class="btn btn-success" data-mdb-ripple-color="dark" routerLinkActive="active" routerLink="/ViewMovieList">Alla filmer<span class="mdc-button__ripple"></span></button>
-      <button mat-raised-button color="toWatch" class="nav-link" routerLinkActive="active" routerLink="/ViewWatchListComponent">Vill se</button>
-      <button mat-raised-button color="haveWatched" class="nav-link"  routerLinkActive="active" routerLink="/ViewWatchedListComponent">Har sett</button>
-    </div>
-  </nav>
+<mat-card style="background-color: white;">
+  <mat-card-content>
+    <button mat-raised-button color="allMovies" style="margin-right: 10px; padding: 0px 30px;" type="button"
+      class="btn btn-success" data-mdb-ripple-color="dark" routerLinkActive="mat-accent"
+      routerLink="/ViewMovieList">Alla filmer<span class="mdc-button__ripple"></span></button>
+    <button mat-raised-button color="toWatch" style="margin-right: 10px; padding: 0px 30px"
+      routerLinkActive="mat-accent" routerLink="/ViewWatchListComponent">Vill se</button>
+    <button mat-raised-button color="haveWatched" style="margin-right: 10px; padding: 0px 30px"
+      routerLinkActive="mat-accent" routerLink="/ViewWatchedListComponent">Har sett</button>
+  </mat-card-content>
+</mat-card>
 
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-  <!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
