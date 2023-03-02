@@ -22,14 +22,12 @@
   <!-- Background image -->
 </header>
 
-
-
 <div>
   <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
     <div style="padding-top: 10px;" class="container">
-      <button class="nav-link" routerLinkActive="active" routerLink="/ViewMovieList">Alla filmer</button>
-      <button class="nav-link" routerLinkActive="active" routerLink="/ViewWatchListComponent">Vill se</button>
-      <button class="nav-link" routerLinkActive="active" routerLink="/ViewWatchedListComponent">Har sett</button>
+      <button mat-raised-button color="allMovies" class="nav-link" type="button" class="btn btn-success" data-mdb-ripple-color="dark" routerLinkActive="active" routerLink="/ViewMovieList">Alla filmer<span class="mdc-button__ripple"></span></button>
+      <button mat-raised-button color="toWatch" class="nav-link" routerLinkActive="active" routerLink="/ViewWatchListComponent">Vill se</button>
+      <button mat-raised-button color="haveWatched" class="nav-link"  routerLinkActive="active" routerLink="/ViewWatchedListComponent">Har sett</button>
     </div>
   </nav>
 

@@ -1,0 +1,14 @@
+.mat-allMovies {
+    border: solid 2px grey;
+    color: rgb(128, 128, 128);
+}
+
+.mat-toWatch {
+    border: solid 2px pink;
+    color: #fff;
+}
+
+.mat-haveWatched {
+    border: solid 2px green;
+    color: #fff;
+}
