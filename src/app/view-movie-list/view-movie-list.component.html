@@ -2,8 +2,8 @@
 <mat-card-content>
 
   <div *ngFor="let item of this.data['unwatchedMovies']['_value']" style="display: inline-block">
-    <mat-card>
-      <mat-card-content style="background-color: green">
+    <mat-card style="background-color: white; margin:2px">
+      <mat-card-content >
         <a class="nav-link" routerLinkActive="active" [routerLink]="['/ViewMovie', item.id]">
           <img 
             src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt=""></a>
@@ -14,8 +14,8 @@
   </div>
 
   <div *ngFor="let item of this.data['moviesToWatch']['_value']" style="display: inline-block">
-    <mat-card>
-      <mat-card-content style="background-color: gold">
+    <mat-card style="background-color: gold; margin:2px">
+      <mat-card-content>
         <a class="nav-link" routerLinkActive="active" [routerLink]="['/ViewMovie', item[0].id]">
           <img 
             src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item[0].poster_path}}" alt=""></a>
@@ -26,8 +26,8 @@
   </div>
 
   <div *ngFor="let item of this.data['watchedList']['_value']" style="display: inline-block">
-    <mat-card>
-      <mat-card-content style="background-color: pink">
+    <mat-card style="background-color: pink; margin:2px">
+      <mat-card-content>
         <a class="nav-link" routerLinkActive="active" [routerLink]="['/ViewMovie', item[0].id]">
           <img 
             src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item[0].poster_path}}" alt=""></a>

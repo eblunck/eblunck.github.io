@@ -1,9 +1,16 @@
-<h1>Filmer jag har sett</h1>
+<mat-card style="background-color: white; position: 50%;">
+  <mat-card-content>
+    <mat-card-title>Filmer jag har sett</mat-card-title>
 
-<div *ngFor="let item of this.data['watchedList']['_value']" style="display: inline-block">
-    <a class="nav-link" routerLinkActive="active" 
-    [routerLink]="['/ViewMovie', item[0].id]">
-      <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item[0].poster_path}}" alt=""></a>
-    <div></div>
-    <a class="nav-link" routerLinkActive="active" [routerLink]="['/ViewMovie', item[0].id]">{{item[0].title}}</a>
-  </div>
+    <div *ngFor="let item of this.data['watchedList']['_value']" style="display: inline-block">
+      <mat-card>
+        <mat-card-content style="background-color: white">
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/ViewMovie', item[0].id]">
+        <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item[0].poster_path}}" alt=""></a>
+      <div></div>
+      <a class="nav-link" routerLinkActive="active" [routerLink]="['/ViewMovie', item[0].id]">{{item[0].title}}</a>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-card-content>
+</mat-card>
