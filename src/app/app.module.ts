@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+
 //Elin was here
 // Maja test
 // Emilia test
@@ -32,6 +34,7 @@ import {MatButtonModule} from '@angular/material/button';
     AppRoutingModule,
     HttpClientModule,
     MatButtonModule,
+    MatCardModule,
     MatSlideToggleModule,
     RouterModule.forRoot([
       { path: 'ViewMovieList', component: ViewMovieListComponent },
