@@ -4,11 +4,11 @@
 }
 
 .mat-toWatch {
-    border: solid 2px pink;
+    border: solid 2px gold;
     color: #fff;
 }
 
 .mat-haveWatched {
-    border: solid 2px green;
+    border: solid 2px pink;
     color: #fff;
 }
