@@ -10,6 +10,9 @@ import { ViewMovieComponent } from './view-movie/view-movie.component';
 import { RouterModule } from '@angular/router';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button';
 //Elin was here
 // Maja test
 // Emilia test
@@ -24,8 +27,12 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule ,
+    HttpClientModule,
+    MatButtonModule,
+    MatSlideToggleModule,
     RouterModule.forRoot([
       { path: 'ViewMovieList', component: ViewMovieListComponent },
       { path: 'ViewMovie/:id', component: ViewMovieComponent },
