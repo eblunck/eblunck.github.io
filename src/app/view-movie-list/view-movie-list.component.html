@@ -1,7 +1,7 @@
 <div> </div>
 <p>view-movie-list works!</p>
 
-<div *ngFor="let item of this.data['allMovies']['_value']" style="display: inline-block">
+<div *ngFor="let item of this.data['unwatchedMovies']['_value']" style="display: inline-block">
     <a class="nav-link" routerLinkActive="active" 
     [routerLink]="['/ViewMovie', item.id]">
       <img style = "border: 3px solid green;" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{item.poster_path}}" alt=""></a>
