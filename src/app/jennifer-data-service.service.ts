@@ -44,7 +44,7 @@ export class JenniferDataServiceService {
       }
     }
     this.deleteFromUnwatched(data[0]);
-    //delete from moviesToWatch()
+    this.deleteFromToWatch(data[0]);
     this.watchedList.next([...this.watchedList.getValue(), data]);
   }
   
@@ -52,6 +52,18 @@ export class JenniferDataServiceService {
     let index = this.unwatchedMovies['_value'].indexOf(data, 0);
     if (index > -1) {
       this.unwatchedMovies['_value'].splice(index, 1);
+    }
+  }
+
+  deleteFromToWatch(data: any) {
+    let dataId = data['id'];
+    for (let i = 0; i < this.moviesToWatch['_value'].length; i++) {
+      let currId = this.moviesToWatch['_value'][i][0]['id'];
+      if (currId === dataId) {
+        this.moviesToWatch['_value'].splice(i, 1);
+        console.log(this.moviesToWatch['_value']);
+        return;
+      }
     }
   }
 }
