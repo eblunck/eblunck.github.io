@@ -8,7 +8,7 @@
         <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{getInfo('poster_path')}}" alt="">
         <div></div>
         <br>
-        <h2>Betygsätt filmen:</h2>
+        <h2>Rate this movie:</h2>
 
 
         <form appearance="fill" class="full-width" [formGroup]="ratingForm" (ngSubmit)="onSubmit()"
@@ -31,9 +31,9 @@
         </form>
         <br><br>
         <button mat-raised-button color="one" class="nav-link" routerLinkActive="active"
-            routerLink="/ViewWatchListComponent" (click)="addToWatchList()"> Lägg till i "filmer du vill se"</button>
+            routerLink="/ViewWatchListComponent" (click)="addToWatchList()"> Add to "Movies to watch"</button>
         <button mat-raised-button color="one" class="nav-link" routerLinkActive="active"
-            routerLink="/ViewWatchedListComponent" (click)="addToWatchedList()">Lägg till i "filmer du sett"</button>
+            routerLink="/ViewWatchedListComponent" (click)="addToWatchedList()">Add to "Have wacthed"</button>
         <br>
     </mat-card-content>
 </mat-card>
